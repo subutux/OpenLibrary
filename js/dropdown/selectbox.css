@@ -1,0 +1,63 @@
+/* Drop down styles*/
+div.selectbox-wrapper {
+  width:400px;
+ position: absolute;
+ border-radius: 5px;
+  background-color:white;
+  border:1px solid #ccc;
+  margin:0px;
+  margin:-10px 57px 0;
+  padding:0px;
+  text-align:left;
+  max-height:200px;
+  overflow:auto;
+  z-index:1;
+}
+
+/*Drop down list styles*/
+div.selectbox-wrapper ul {
+  list-style-type:none;
+  margin:0px;
+  padding:0px;
+}
+/* Selected item in dropdown list*/
+div.selectbox-wrapper ul li.selected { 
+  background-color: #EAF2FB;
+}
+
+/* Hover state for dropdown list */
+div.selectbox-wrapper ul li.current { 
+  background-color: #CDD8E4;
+}
+
+/* Drop down list items style*/
+div.selectbox-wrapper ul li {
+  list-style-type:none;
+  display:block;
+  margin:0;
+  padding:2px;
+  cursor:pointer;
+}
+
+/* Look and feel of select box */
+.selectbox 
+{
+  margin: 0px 5px 10px 0px;
+  padding-left:2px;
+  font-size:1em;/* Resize Font*/
+  width : 140px; /* Resize Width */
+  display : inline-block;
+  text-align:center;
+  background-color: white
+  border: 1px solid grey;
+  border-radius: 10px 10px 10px 10px;
+  cursor: pointer;
+  border:1px solid #D1E4F6;
+  color:#333;
+  padding-right: 10px;
+  background-image: url('../../imgs/OL_dropdown_arrow.png');
+  background-repeat: no-repeat;
+  background-position: right center;
+}
+
+
