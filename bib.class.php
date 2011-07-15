@@ -219,6 +219,22 @@ Class OpenLibrary {
 			"link" => $artwork
 			);
 	}
+	public function createSmartList($name,$data) {
+	$this->db_connect();
+		$sQ = "SELECT * FROM `smartlists` WHERE `name` = '" . $name . "';";
+		if (mysql_num_rows(mysql_query($q,$this->db)) > 0){
+			throw new Exception('error: smartlist with name '.$name.' already exists.choose a different name.');
+		} else {
+			$q = "INSERT INTO `smartlists` ('name','data') VALUES('".$name."','".json_encode($data)."');";
+			if(mysql_query($q,$this->db)) {
+				$listid = mysql_insert_id($this->db);
+				$this->db_close();
+				return $listid;
+			} else {
+				throw new Exception('Interal Error: Unable to add smartlist! '.mysql_error());
+			}
+		}
+	}
 	public function Search($searchString){
 		$this->db_connect();
 		if (empty($searchString)){

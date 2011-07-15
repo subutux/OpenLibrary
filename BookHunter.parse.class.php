@@ -17,7 +17,8 @@
  */
  Class BookHunterImport extends OpenLibrary {
  		public $url;
- 		public function Import(){ /* Step 1 */
+ 		
+ 		public function Import(){
  			if (!is_dir($this->url)){
  				throw new Exception('Cannot find '.$this->url.'! Check if we have read access!');
  			}
@@ -77,7 +78,15 @@
 				while( false !=== ($file = readdir($handle) ){
 					$ff = explode($file,".");
 					$ext = end($ff);
- }				if (strtoupper($ext) == "JP2"){
+ 					if (strtoupper($ext) == "JP2"){
+ 						$outfile = $ff[0] . ".jpg";
+ 						$this->updateStatus('BookHunter: Import','converting $file to $outfile ');
+ 						imagejpeg($file,$outfile,"100");
+ 					}
+ 				}
+ 			}
+ 		}
+ 			
 **/
 }					
  ?>

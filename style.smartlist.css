@@ -1,0 +1,20 @@
+fieldset {
+border: 1px solid grey;
+border-radius: 5px;
+-moz-border-radius: 5px;
+margin-bottom: 5px;
+}
+fieldset .rule {
+border: 1px solid grey;
+border-radius: 5px;
+-moz-border-radius: 5px;
+background-color: rgb(192,192,192);
+margin-bottom: 5px;
+}
+body {
+background-color:rgb(170,170,170);
+font-family: arial;
+}
+input {
+font-family: arial;
+}
